@@ -27,10 +27,11 @@ public class LoginPage {
         driver.findElement(locators.PASSWORD_FIELD).sendKeys(password);
     }
 
-    public void clickLoginButton() {
+    public WebDriver clickLoginButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(locators.LOGIN_BUTTON));
-        driver.findElement(locators.LOGIN_BUTTON).click();
+        driver.findElement(LoginPageLocators.LOGIN_BUTTON).click();
+        return driver;
     }
 
     public By getDashboardElementLocator() {
