@@ -53,7 +53,8 @@ public class Tests {
     }
     @Test(dependsOnMethods = {"testAdmin"})
     public void testDashBoard() {
-        adminPage.editJobTitle();
+
+        adminPage.editBranding();
         String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
