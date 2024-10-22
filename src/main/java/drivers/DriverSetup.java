@@ -26,7 +26,8 @@ public class DriverSetup {
         }
     }
 
-    public static void waitForFiveSeconds() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    public static void waitForFiveSeconds(int sec) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
+
 }

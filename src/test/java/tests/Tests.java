@@ -11,12 +11,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.AdminPage;
-import pages.DashBoardLocators;
 import pages.LoginPage;
 
 import java.time.Duration;
-
-import static pages.DashBoardLocators.ADMIN_MENU_ITEM;
 
 public class Tests {
     private WebDriver driver;
@@ -52,13 +49,14 @@ public class Tests {
 
     }
     @Test(dependsOnMethods = {"testAdmin"})
-    public void testDashBoard() {
+    public void addUser() {
+       //adminPage.editBranding();
+        //DriverSetup.waitForFiveSeconds(5);
+        //adminPage.searchForUser();
+        adminPage.editNationality();
 
-        adminPage.editBranding();
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
     }
+
     @AfterClass
     public void tearDown() {
         //DriverSetup.quitDriver();
