@@ -15,7 +15,7 @@ import pages.LoginPage;
 
 import java.time.Duration;
 
-public class Tests {
+public class AdminTest {
     private WebDriver driver;
     private LoginPage loginPage;
     private AdminPage adminPage;
